@@ -1,0 +1,177 @@
+---
+layout: default
+
+facts:
+  - fact: 900
+  - fact: Y2K
+  - fact: 420K
+---
+<section>
+    <div class="max-w-screen-xl mx-auto p-10">
+        <h1 class="mb-10">This is a <br>fun heading</h1>
+        <div class="aspect-landscapewide relative grown">
+            <img src="images/moody-1.jpg" alt="" class="object-cover absolute h-full w-full">
+        </div>
+    </div>
+
+</section>
+<!-- fact section -->
+<section class="">
+    <div class="max-w-screen-xl mx-auto grid grid-cols-3 text-center sm:text-left sm:grid-cols-6 p-10 pt-0 gap-2">
+        {% for item in page.facts %}
+        <div class="">
+            <span class="block font-black uppercase">Fact:</span>
+            <span class="text-3xl font-black uppercase "> {{item.fact}}</span>    
+        </div>
+        {% endfor %}
+        <div class="col-span-3">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate ut quaerat, veritatis ad enim consectetur laborum rem ex deserunt quo temporibus nam esse accusamus dignissimos magni perferendis assumenda. Quas, quod!</p>
+        </div>
+    </div>
+</section>
+
+<!--  -->
+<section>
+    <div class="max-w-screen-xl mx-auto grid mb-10">
+        <div class="text-center p-10 sm:max-w-75 mx-auto">
+            <h2 class="mb-5 leading-sm">
+                Another<br>
+                <span class="">Sick Heading for attention</span> 
+            </h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, excepturi. Ipsa, aspernatur alias. Voluptatem consequatur recusandae iste aliquam similique nesciunt dolor, numquam eveniet mollitia tempore rem animi eaque dicta velit!</p>
+        </div>
+        <!-- Image gallery -->
+        <div class="grid xs:grid-cols-2 md:grid-cols-3 gap-2 p-10 pt-0">
+            <div class="pb-100p relative">
+                <img src="images/moody-2.jpg" alt="" class="object-cover absolute h-full w-full">
+            </div>
+            <div class=" pb-100p relative">
+                <img src="images/moody-3.jpg" alt="" class="object-cover absolute h-full w-full">
+            </div>
+            <div class="pb-100p relative">
+                <img src="images/moody-4.jpg" alt="" class="object-cover absolute h-full w-full">
+            </div>
+            <div class="pb-100p relative">
+                <img src="images/moody-5.jpg" class="object-cover absolute h-full w-full">
+            </div>
+            <div class="pb-100p relative">
+                <img src="images/moody-6.jpg" class="object-cover absolute h-full w-full">
+            </div>
+            <div class="pb-100p relative">
+                <img src="images/moody-7.jpg" class="object-cover absolute h-full w-full">
+            </div>
+        </div> 
+        <!-- button -->
+        <div class="text-center">
+           <a href="" class="button dark:dark-button">Sign Up</a> 
+        </div>        
+    </div>
+</section>
+<!-- 2 columns -->
+<section>
+    <div class="max-w-screen-xl mx-auto p-10">
+        <div class="mb-5 ">
+            <h2>This is a <br> fun heading</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 ">
+            <div class="sm:pr-20 grid">
+                <div>
+                    <h4 class="mb-10"><span class="block border-b-2 font-bold uppercase">Another</span> <span class="normal-case">Sick Heading for attention</span></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ad enim consequatur nobis magnam aspernatur incidunt voluptatum, tempora perspiciatis alias obcaecati vero labore excepturi. Facere error ipsam ad unde optio?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui veniam aliquam harum quos eaque ratione, quis, eligendi quod consequuntur nemo quidem similique, alias in voluptate magnam fugiat quibusdam excepturi reprehenderit.</p>                    
+                </div>
+
+                <div class="flex items-end mb-8 sm:mb-0">
+                    <a href="" class="button dark:dark-button">Sign up</a>
+                </div>
+                
+            </div>   
+            <div class="flex ">
+                <div class="aspect-portrait relative grow">
+                    <img src="images/moody-8.jpg" alt="" class="object-cover absolute h-full w-full">
+                </div>
+                <span class="rotate-text-180 items-end">credit: some legend</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- text heading -->
+<section>
+    <div class="max-w-screen-xl mx-auto p-10">
+        <div class="border-t-2 border-b-2 text-center">
+            <h2 class="p-10 max-w-100 sm:max-w-75 mx-auto">
+                Sometimes all you need is a big random block of text to really drive home the point.
+            </h2>
+        </div>
+    </div>
+</section>
+<!-- column rotate -->
+<section>
+    <div class="max-w-screen-xl mx-auto grid sm:grid-cols-[2.5rem,1fr] justify-between p-10 pt-0">
+        <!-- fr 1 fraction of remaining space -->
+        <div class=" text-left">
+            <h2 class="sm:rotate-text-180 mb-5 sm:mb-0 sm:text-[3.8rem] text-[2.5rem]">Gallery</h2>
+        </div>
+        <div class="sm:pr-5 sm:pl-10 pb-0 flex flex-col justify-between">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, rem! Facere commodi molestias et tempore blanditiis. Sit, ipsa iste illum nemo in maiores amet consequatur magni qui nostrum ullam praesentium.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa excepturi ratione ab repellat quos iste iure laboriosam dolorum. Illo natus dignissimos nam eos, accusantium unde delectus fugit obcaecati rem vitae.</p>
+            <div>
+                <a href="" class="button dark:dark-button">Sign Up</a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- gallery mix -->
+<section class=" overflow-x-scroll  pt-10 pb-10">
+     <div class="flex flex-row flex-nowrap gap-5 items-center"> <!--container not to wrap -->
+        <div class="basis-[60%] sm:basis-[30%] shrink-0 "> <!--column size -->
+            <div class="aspect-landscape relative "> <!--photobox size-->
+                <img src="images/moody-9.jpg" alt="" class="object-cover absolute h-full w-full"> 
+            </div>            
+        </div>
+        <div class="basis-[60%] sm:basis-[30%] shrink-0 ">
+            <div class="aspect-portrait relative">
+                <img src="images/moody-10.jpg" alt="" class="object-cover absolute h-full w-full">
+            </div>            
+        </div>
+        <div class="basis-[60%] sm:basis-[30%] shrink-0">
+            <div class="aspect-landscape relative ">
+                <img src="images/moody-11.jpg" alt="" class="object-cover absolute h-full w-full">
+            </div>            
+        </div>
+        <div class="basis-[60%] sm:basis-[30%] shrink-0 ">
+            <div class="aspect-portrait relative">
+                <img src="images/moody-12.jpg" alt="" class="object-cover absolute h-full w-full">
+            </div>            
+        </div>
+    </div>
+</section>
+<!-- contact -->
+<section>
+    <div class="max-w-screen-xl mx-auto p-10">
+        <div>
+            <h2 class="mb-10">Contact Us.</h2>
+        </div>
+        <div class="grid sm:grid-cols-2">
+            <div class="">
+                <form>
+                    <label for="name" class="sm:max-w-50 border-b-2 ">name</label>
+                    <input name="name" type="text" id="name" class="  " placeholder="Any name will do">
+                    <label for="email" class="sm:max-w-50 border-b-2">email</label>
+                    <input name="email" type="email" id="email" class="" placeholder="We prefer something real">
+                    <label for="message">message</label>
+                    <textarea for="message" type="text" id="message" class="border-2  w-full" placeholder="We love a good compliment ;&#41;" rows="5"></textarea>
+                    <div class="text-right">
+                        <button class="button " type="submit" value="SEND">send it baby</button>    
+                    </div>
+
+                </form>
+            </div>
+            <div class="pb-80p relative hidden sm:flex">
+                <img src="images/moody-13.jpg" alt="" class="object-cover absolute h-full w-full pl-20p">
+            </div>
+        </div>
+    </div>
+</section>
+
