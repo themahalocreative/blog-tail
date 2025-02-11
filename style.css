@@ -16,6 +16,21 @@
 html {
   scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
 }
+/* ----------- Default Styles to apply to the whole project  --------- */
+:root{
+  --beige: #F6F6EE;
+  --watercolour: #D5CEBE; /* replace with image */
+  /* cannot put spaces in arbitary value so make a variable */
+
+}
+.beige {
+  background-color: var(--beige);
+}
+
+.watercolour {
+  background-color: var(--watercolour);
+}
+
 /* SCROLL BAR ---------------------- */
 :root /* Mozilla Firefox */{
   scrollbar-color: blacks #bebbac !important;
@@ -69,7 +84,7 @@ anything you want to override or is general as a base, next level component, spe
     text-transform: uppercase;
   }
   /* header footer */
-  header a {
+/*   header a {
     padding: 0.5rem 1rem;
     text-transform: uppercase;
     font-family: 'Noto Sans JP', sans-serif;
@@ -84,9 +99,9 @@ anything you want to override or is general as a base, next level component, spe
   footer h4 {
     font-weight: 800;
     @apply mb-2;
-  }
+  }*/
   /* form */
-  label, input, button, textarea {
+  /* label, input, button, textarea {
     display: block;
   }
   label {
@@ -110,10 +125,10 @@ anything you want to override or is general as a base, next level component, spe
   }
   textarea {
     @apply dark:border dark:border-white dark:bg-transparent;
-  }
-}
+  } */
+} 
 @layer components {
-  .button {
+/*   .button {
     padding: 0.5rem 1.5rem;
     text-transform: uppercase;
     display: inline-block;
@@ -123,13 +138,13 @@ anything you want to override or is general as a base, next level component, spe
   .button:hover {
     transition: all 0.2s;
     @apply bg-white text-black border-black dark:bg-black dark:text-white dark:border-white;
-  }
-}
+  }*/
+} 
 @layer utilities {
   .rotate-text-180 {
     writing-mode: vertical-lr;
-    text-orientation: mixed;
-    @apply rotate-180;
+/*     text-orientation: mixed;
+    @apply rotate-180; */
   }  
 
 /* can add more utilities */
