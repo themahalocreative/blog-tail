@@ -7,26 +7,25 @@ facts:
   - fact: 420K
 ---
 <!-- 2 card padding -->
-<section class="max-w-screen-xl mx-auto p-[20%] min-h-90">
-    <div class="grid grid-cols-2">
-        <div class="aspect-portrait-tall relative grown border m-8 mr-4">
-            <!-- spread in grid research!!!!!!!!!!!!! -->
-            <div class="p-8">
-                <h1 class="mb-4">Hello</h1>
-                <p>here</p>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quia id fuga recusandae odit rerum consequatur consequuntur, ab accusamus nemo earum saepe autem velit illum quidem nam voluptates pariatur dolorum.</p>
-            </div>
+<section class="max-w-screen-xl mx-auto "> 
+    <div class="grid grid-cols-2 min-h-90 p-[10%] content-center">
+        <div class="grid content-between min-h-[30rem] max-w-[20rem] mx-auto relative grown border m-8 mr-4 py-10 px-6 text-center">
+        <!-- spread in grid research!!!!!!!!!!!!! -->
+            <h1 class="mb-4 pink-100">Hello.</h1>
+            <p>here</p>
+            <p class="mb-0 uppercase text-sm">Ab accusamus nemo earum saepe autem velit illum quidem nam voluptates pariatur dolorum.</p>
+            
         </div>
-        <div class="aspect-portrait-tall relative grown border m-8 ml-4">
-            <img src="images/moody-1.jpg" alt="" class="object-cover absolute h-full w-full">
+        <div class=" min-h-[30rem] max-w-[20rem] relative grown border m-8 ml-4">
+            <img src="images/noosa5.jpg" alt="" class="object-cover absolute h-full w-full">
         </div>
     </div>
 </section>
 
 
 <!-- card side slider CHECK BG-IMAGE REQUIREMENT AND SLIDER -->
-<section class="max-w-screen-xl mx-auto min-h-100 p-[20%] pb-[40%] bg-[url(/images/moody-11.jpg)] bg-cover">
-    <div class="grid grid-cols-3">
+<section class="max-w-screen-xl mx-auto min-h-100 p-[20%] pb-[40%] bg-[url(/images/moody-11.jpg)] bg-cover ">
+    <div class="grid grid-cols-3 ">
         <div class="aspect-portrait-tall m-8 border beige">
             <span>logo</span>
             <h2 class="uppercase">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis aut ipsum ab sequi atque iure iusto vitae dolor maxime amet asperiores doloribus nihil impedit reprehenderit, earum excepturi voluptates a numquam.</h2>
@@ -39,85 +38,117 @@ facts:
 
 
 <!-- Magazine bg image with 2columns-->
- <section class="max-w-screen-xl mx-auto min-h-100 p-[10%] bg-[url(/images/moody-13.jpg)] bg-cover">
-    <div class="min-h-50"></div>
-    <div class="grid grid-cols-2 ">
-        <div class="m-4"> 
-            <h3 class="min-h-[5rem]">tuesday healing</h3>
+ <!-- add overlay!!!!!!! -->
+ <section class="text-white max-w-screen-xl mx-auto min-h-100 p-[10%] bg-[url(/images/noosa-inlet.jpg)] bg-cover bg-bottom bg-no-repeat">
+    <div class="min-h-70"></div>
+    <div class="grid grid-cols-2 items-end gap-4">
+        <div class=""> 
+            <h3 class="min-h-[5rem]  text-5xl leading-[1.3em] pb-8">tuesday <br> healing</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, neque rem minus nobis quos vitae harum, omnis sunt cupiditate sapiente quod incidunt repellendus esse magnam praesentium. Doloribus asperiores dignissimos accusantium.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, neque rem minus nobis quos vitae harum, omnis sunt cupiditate sapiente quod incidunt repellendus esse magnam praesentium. Doloribus asperiores dignissimos accusantium.</p>
         </div>
-        <div class="m-4"> 
-            <span class="min-h-[5rem] block"></span>
+        <div class=""> 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, neque rem minus nobis quos vitae harum, omnis sunt cupiditate sapiente quod incidunt repellendus esse magnam praesentium. Doloribus asperiores dignissimos accusantium.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, neque rem minus nobis quos vitae harum, omnis sunt cupiditate sapiente quod incidunt repellendus esse magnam praesentium. Doloribus asperiores dignissimos accusantium.</p>
         </div>
     </div>
     <!-- FIX -->
-    <span class="m-4 pt-8 ">
-        <p class="">hello</p>
-        <span class="border-b-2 border-black flex"></span>
+    <span class="flex flex-row flex-nowrap items-center justify-center m-4 pt-8 ">        
+        <span class="basis-full block border-b-2  "></span>
+        <p class="flex-none mb-0 p-8">hello</p>
     </span>
  </section>
 
 
  <!-- Photo collage -->
-<section  class="max-w-screen-xl mx-auto min-h-100 relative p-[10%]  py-[20%] ">
+<section  class="max-w-screen-xl mx-auto min-h-100  py-[20%] ">
     <!-- pull out of thread and rotate -->
-    <div class="absolute rotate-text-180 left-5 top-[17%]">
-        <h4 class="uppercase"><span class="italic left-4 inline-block capitalize relative">this is cursive </span> ocean-chart.</h4>
-    </div>
-    <div class="grid grid-cols-3 ">
-        <div class="col-span-2 pb-6">
-            <div class="aspect-portrait relative grown border">
-                <img src="images/moody-2.jpg" alt="" class="object-cover absolute h-full w-full">
-            </div>
+     <div class="relative px-[10%] ">
+        <div class="absolute rotate-text-180 left-5 top-8">
+            <h4 class="uppercase">
+                <span class="italic left-4 inline-block capitalize relative">this is cursive </span> 
+                <span class="text-2xl">ocean-chart.</span>
+                
+            </h4>
         </div>
-        <div></div>
-        <div class="col-span-2 ">
-            <div class="aspect-landscapewide relative grown border">
-                <img src="images/moody-2.jpg" alt="" class="object-cover absolute h-full w-full">
+        <div class="grid grid-cols-3 ">
+            <div class="col-span-2 pb-6">
+                <div class="aspect-portrait relative grown">
+                    <img src="images/noosaheads.jpg" alt="" class="object-cover absolute h-full w-full">
+                </div>
             </div>
-        </div>
-        <div class="">wave</div>
-    </div>
+            <div></div>
+            <div class="col-span-2 ">
+                <div class="aspect-landscapewide relative grown">
+                    <img src="images/noosa-rocks.jpg" alt="" class="object-cover absolute h-full w-full">
+                </div>
+            </div>
 
-    <div class="w-2/5 absolute top-[60vh] right-10">
-        <div class="aspect-portrait relative grown border">
-            <img src="images/moody-2.jpg" alt="" class="object-cover absolute h-full w-full">
+        </div>
+
+        <div class="w-2/5 absolute top-[20rem] right-10 ">
+            <div class="aspect-portrait relative grown">
+                <img src="images/noosa6.jpg" alt="" class="object-cover absolute h-full w-full">
+            </div>        
+            <div class="w-[80%] mx-auto p-8">
+                <!-- Generator: Adobe Illustrator 27.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 708.66 198.43" style="enable-background:new 0 0 708.66 198.43;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:10;}
+                </style>
+                <path class="st0" d="M558.63,45.16c-18.17-5.79-50.52-12.72-85.71-1.34c-24.27,7.85-40.66,21.42-54.78,33.12
+                    c-22.9,18.97-24.69,27.66-50.09,54.98c-35.85,38.56-57.21,61.53-80.61,58.02c-28.75-4.32-42.21-45.91-43.04-48.44
+                    c-18.13-55.26,27.1-97.62,42.26-109.45c6.27-4.89,20.39-13.94,42.52-17.32c8.11-1.24,15.01-1.32,19.3-1.22"/>
+                <path class="st0" d="M708.85,117.38c-7.75-3.2-20.31-7.46-36.48-8.69c-46.34-3.5-67.78,22.07-112.31,18.52
+                    c-3.32-0.26-33.32-2.94-49.18-18.39c-18.45-17.97-12.25-47.85,15.37-59.03c11.77-4.77,24.6-4.99,32.39-4.63"/>
+                <path class="st0" d="M0.18,133.94c-0.4,16.62,11.25,29.69,27.43,32.78c13.13,2.51,25.75-2.22,30-3.87
+                    c25.38-9.82,32.23-30.34,34.96-37.32C111.55,76.96,195.55,16.41,276.39,8.19c14.85-1.51,39.47-2.27,72.1,5.33"/>
+                </svg>              
+            </div>
         </div>        
-    </div>
+     </div>
+
 
 </section>
  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 
 <!-- post card x2 bg -->
-<!-- card side slider CHECK BG-IMAGE REQUIREMENT AND SLIDER -->
- <!-- replace border with x shadow fix text positioning add watercolourbg -->
-<section class="max-w-screen-xl mx-auto min-h-100 p-[20%] bg-[url(/images/moody-11.jpg)] bg-cover">
+<!-- THIS TEMPLATE REQUIRES CSS CARD-1 AND SHADOW-X -->
+ <!-- add watercolourbg -->
+<section class="max-w-screen-xl mx-auto min-h-100 p-[10%] bg-[url(/images/noosa6.jpg)] bg-cover">
     <div class="">
-        <div class="aspect-rectangle m-8 border watercolour min-h-50 p-8 px-16 relative">
+        <div class="card-1 bg-[url(/images/cardtexture.png)] bg-cover bg-norepeat  grid content-between p-8 px-16  shadow-x">
             <h1 class="text-center pb-6">Italian riviera</h1>
-            <span class=" block border-r h-[3rem] w-[50%] mb-16"></span>
+            <span class=" block border-r-2 h-[3.5rem] w-[50%] mb-16"></span>
             <span class="absolute right-8 top-8">stamp</span>
             <!-- flex box make sit on bottom -->
              <div class="relative mb-16">
         <!-- LIQUID LOOP X3? -->
-                <span class="block border-b pb-10"></span>
-                <span class="block border-b pb-10"></span>
-                <span class="block border-b pb-10"></span>
+                <span class="block opacity-25 border-b pb-10"></span>
+                <span class="block opacity-25 border-b pb-10"></span>
+                <span class="block opacity-25 border-b pb-10"></span> 
                 <!-- rotate and style text -->
-                <div class="absolute top-0 rotate-4">
-                  <p class="italic ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis aut ipsum ab sequi atque iure iusto vitae dolor maxime amet asperiores doloribus nihil impedit reprehenderit, earum excepturi voluptates a numquam.</p>
+                <div class="absolute top-0">
+                  <p class=" rotate-[-2deg] italic text-xl leading-12">iusto vitae dolor maxime amet asperiores doloribus nihil impedit reprehenderit, earum excepturi voluptates a numquam.</p>
    
                 </div>
             </div>
         </div>
-        <div class="mt-16 relative border m-8 watercolour">
-            <!-- FLEX SPLIT THE TEXT -->
-            <div class="bg-[url(/images/moody-12.jpg)] bg-cover m-4 min-h-50">
-                <h2 class="p-2"><span>sicillian</span><span>sundays</span></h2>
+        <div class="card-1 bg-[url(/images/cardtexture.png)] bg-cover bg-norepeat  m-15 m-8 shadow-x">
+             <img src="images/noosaheads.jpg" alt="" class="object-cover absolute h-full w-full p-4">  
+<!--              <div class="p-4  h-full ">
+                <div class="bg-[url(/images/moody-12.jpg)] bg-cover h-full "> 
+             </div> -->
+            
+                <span class="absolute z-10 top-4 left-0 w-full">
+                    <h2 class="text-3xl text-watercolour p-4 flex justify-between px-8">
+                        <span class=" left-0 uppercase">sicillian</span>
+                        <span class="right-0 uppercase">sundays</span>
+                    </h2>
+                </span>
+
             </div>
         </div>
     </div>
@@ -125,26 +156,31 @@ facts:
 
 
 <!-- post card x2 NO bg -->
-<!-- card side slider CHECK BG-IMAGE REQUIREMENT AND SLIDER -->
- <!-- replace border with x shadow fix text positioning add watercolourbg -->
+<!-- THIS TEMPLATE REQUIRES CSS CARD-1 AND SHADOW-X -->
+ <!--  add watercolourbg -->
  <section class="max-w-screen-xl mx-auto min-h-100 p-[10%] beige">
     <div class="">
-        
-        <div class="m-12 watercolour relative p-12 px-8">
-            <div class="bg-[url(/images/moody-12.jpg)] bg-cover min-h-50">
-                <!-- style and roate -->
-                <h2 class="italic absolute top-[1.5rem] left-16">la da de this is <br> France</h2>
-            </div>
+        <div class=" card-1 bg-[url(/images/cardtexture.png)] bg-cover bg-norepeat  m-15">
+            <img src="images/noosaheads.jpg" alt="" class="object-cover absolute h-full w-full py-10 px-8">
+            <!--              <div class=" h-full py-10 px-8">
+                            <div class="bg-[url(/images/moody-12.jpg)] bg-cover h-full "> 
+                         </div> -->
+            <span class="absolute top-8 left-14">
+                <h2 class="italic  rotate-[-5deg] text-right leading-8">la da de this is <br> France</h2>
+           </span>
+
         </div>
         <!-- shadows and watercolour -->
-        <div class="aspect-rectangle m-12 border watercolour min-h-50 p-10 px-16 text-center">
-            <p class="uppercase font-bold">A note from</p>
-            <!-- rotate and style -->
-            <h3 class="italic mb-8"> A Cote d'Azur</h3>
-            <!-- flex box make sit on bottom -->
-            <!-- rotate and style text -->                
+        <div class="grid content-between card-1 bg-[url(/images/cardtexture.png)] bg-cover bg-norepeat  p-10 px-16 m-12 text-center shadow-rb ">
+            <span>
+                <p class="uppercase font-bold mb-0">A note from</p>
+                <!-- rotate and style -->
+                <h3 class="italic mb-8 text-4xl"> A Cote d'Azur</h3>                
+            </span>              
             <p class="italic ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis aut ipsum ab sequi atque iure iusto vitae dolor maxime amet asperiores doloribus nihil impedit reprehenderit, earum excepturi voluptates a numquam.</p>
-            <span class=""> This sits on bottom<span class="block">so does this but leads somewhere</span></span>
+            <p class="uppercase mb-0">
+                This sits on bottom<span class="block">so does this but leads somewhere</span>
+            </p>
         </div>
     </div>
 </section>
@@ -160,29 +196,42 @@ facts:
 
 <!-- photo collage2 -->
  <!-- mobile -->
-<section class="max-w-screen-xl mx-auto watercolour py-[10%] text-center">
-    <h2 class="mb-8"> The comprehensive <br> city guide to tulum</h2>
-    <p>The tulum guide by wayfarer</p>
+<section class="max-w-screen-xl mx-auto beige py-[10%] text-center">
+    <h2 class="mb-8 text-6xl"> The comprehensive <br> city guide to tulum</h2>
+    <p class="uppercase text-2xl pt-10">The tulum guide by wayfarer</p>
     <div class="grid grid-cols-3 pt-[10%]">
         <!-- sticky tape and stamp-->
         <div class="relative left-8 z-10 top-[5rem]">
-            <div class="aspect-portrait-tall relative grown border">
-                <img src="images/moody-2.jpg" alt="" class="object-cover absolute h-full w-full">
+            <div class="aspect-portrait-tall relative grown ml-4">
+                <!-- TAPE!!!!! -->
+                <img src="images/tape2.png" alt="" class="object-cover relative z-20 top-4 max-w-[8rem] opacity-80 mx-auto">
+                <img src="images/noosa-hinterland.jpg" alt="" class="object-cover absolute h-full w-full">
             </div>
-            <div class="absolute bottom-0 left-[-0.5rem]">
-                <span class="black-100 p-4"> stamp</span>
+            <div class="absolute bottom-[-4rem] left-0">
+                <span class="block bg-black w-[5rem] h-[6rem]"> </span>
             </div>
         </div>
         <!-- shadow -->
         <div class="relative right-8">
-            <div class="aspect-portrait relative grown border">
-                <img src="images/moody-2.jpg" alt="" class="object-cover absolute h-full w-full">
+            <div class="grid content-between aspect-portrait relative border-white border-t-4 border-r-4 shadow-lt px-16 py-4 bg-[url(/images/cardtexture-light.png)] bg-cover bg-norepeat">
+                <h4 class="uppercase text-2xl leading-10 mb-8">the lost art
+                    <span class="text-lg block">of</span> slow travel
+                </h4>
+                <p class="rotate-[-4deg] italic p-4 text-lg leading-7"> Deserunt, voluptatum recusandae. Incidunt corporis nisi molestias nam exercitationem harum dolore consectetur, accusamus saepe velit quia libero qui quaerat ipsa quibusdam esse?</p>
+                <span>
+                    <p class="rotate-[-4deg] italic mb-0 text-lg text-left pl-8"> see you there</p>
+                    <h4 class="uppercase text-2xl leading-10"> wayfarer</h4>                    
+                </span>
+
             </div>
         </div>
         <div>
-            <div class="relative mr-[5rem] top-8 right-6">
+            <div class="relative mr-[5rem] top-0 right-6">
+                <img src="images/tape3.png" alt="" class="object-cover relative z-20 top-4 max-w-[8rem] opacity-80 mx-auto">
                 <div class="aspect-portrait relative grown border-8">
-                    <img src="images/moody-2.jpg" alt="" class="object-cover absolute h-full w-full">
+                     <!-- TAPE!!!!! -->
+                     
+                    <img src="images/noosa-rocks2.jpg" alt="" class="object-cover absolute h-full w-full">
                 </div>
             </div>  
                       
@@ -192,46 +241,56 @@ facts:
     <div class="grid grid-cols-3">
         <div></div>
         <!-- rotate and tape -->
-        <div class="relative z-10 top-[-6rem] left-16">
-            <div class="aspect-landscape relative grown ">
-                <img src="images/moody-2.jpg" alt="" class="object-cover absolute h-full w-full">
+        <div class="relative z-10 top-[-4rem] left-[5rem]  rotate-[-5deg]">
+            <img src="images/tape1.png" alt="" class="object-cover relative z-20 top-4 max-w-[6rem] opacity-80 mx-auto">
+            <!-- <div class="relative z-20 top-2 bg-black w-[5rem] h-[2rem] mx-auto"></div> -->
+            <div class="relative aspect-landscape relative bg-[url(/images/cardtexture.png)] bg-cover bg-norepeat  shadow-x-sm">
+                <div class="absolute z-20 right-6 bottom-1 text-right">
+                    <p class="text-xl ">
+                        <span class="italic block pr-16">greatings from</span>
+                        <span class="uppercase text-3xl">Noosa</span>
+                    </p>
+                </div>
+                <img src="images/noosa2.jpg" alt="" class="p-2 object-cover absolute h-full w-full">
             </div>
         </div>
-        <div class="relative top-[-14rem] right-10">
-            <div class="aspect-rectangle border watercolour p-8 px-16 relative content-between grid">
+        <div class="relative top-[-14rem] right-12">
+            <div class="relative grid content-between aspect-rectangle p-8 px-16 bg-[url(/images/cardtexture.png)] bg-cover shadow-x-sm ">
                 <p class="text-center uppercase ">Italian riviera</p>
-                <span class=" block border-r h-[1.5rem] w-[50%] mb-4"></span>
+                <span class=" block border-r-2 h-[1.5rem] w-[50%] mb-4"></span>
                 <span class="absolute right-8 top-8">stamp</span>
                 <!-- flex box make sit on bottom -->
                  <div class="relative mb-8">
             <!-- LIQUID LOOP X3? -->
-                    <span class="block border-b pb-8"></span>
-                    <span class="block border-b pb-8"></span>
-                    <span class="block border-b pb-8"></span>
+                    <span class="block opacity-25 border-b pb-8"></span>
+                    <span class="block opacity-25 border-b pb-8"></span>
+                    <span class="block opacity-25 border-b pb-8"></span>
                     <!-- rotate and style text -->
-                    <div class="absolute top-0 rotate-4">
-                      <p class="italic "> Nobis aut ipsum ab sequi atque iure iusto vitae dolor maxime amet asperiores doloribus nihil impedit reprehenderit, earum excepturi voluptates a numquam.</p>
+                    <div class="absolute top-0 ">
+                      <p class="italic rotate-[-2.5deg] leading-8  pl-8"> speriores doloribus nihil impedit reprehenderit, earum excepturi voluptates a numquam.</p>
        
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="flex flex-row flex-nowrap px-[20%] items-center justify-center">
-        <div class="flex-none px-4 ">Tulum</div>
-        <div class=" basis-128 border-b"></div>
-        <div class="flex-none px-4 ">Mexico</div>
+    <div class="flex flex-row flex-nowrap px-[20%] items-center justify-center uppercase pt-12">
+        <div class="flex-none px-8 ">Tulum</div>
+        <div class="flex basis-[15rem] border-b"></div>
+        <div class="flex-none px-8 ">Mexico</div>
     </div>
 </section>
 
 
 <!-- image and card rotated -->
-<!-- ripped paper image banner -->
-<section class="max-w-screen-xl mx-auto min-h-80 p-[20%] bg-[url(/images/moody-11.jpg)] bg-cover">
-    <div class="watercolour h-{5rem} text-center p-8 w-[30rem] justify-content">
-        <span>image</span>
+
+<section class="max-w-screen-xl mx-auto min-h-80 p-[20%] bg-[url(/images/noosa-rocks2.jpg)] bg-cover bg-bottom flex justify-center">
+    <div class=" bg-[url(/images/cardtexture.png)] bg-cover bg-norepeat  h-{5rem} text-center p-8 py-14 w-[25rem] justify-content rotate-[-5deg]">
+        <span class="mb-6 inline-block">image</span>
         <h3 class="uppercase mb-8">This is a card</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nesciunt exercitationem nihil amet aut aperiam cupiditate optio ipsa accusamus? Non ducimus magnam corporis rerum quae dolorem aperiam. Suscipit, quibusdam dolorem.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id.</p>
+        <span class="uppercase">hello</span>
         <!-- style and shadow and bg water color and ripped bottom -->
     </div>
 </section>
