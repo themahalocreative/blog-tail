@@ -33,7 +33,7 @@ html {
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: proxima-nova, ui-sans-serif; /* 4 */
+  font-family: Montserrat, ui-sans-serif; /* 4 */
   font-feature-settings: normal; /* 5 */
 }
 /*
@@ -317,7 +317,8 @@ h1, h2, h3, h4 {
     font-family: 'Noto Sans JP', sans-serif;
   }
 p, a {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Montserrat", serif;
+    font-size: 1rem;
   }
 h1 {
     font-weight: 800;
@@ -332,10 +333,26 @@ h2 {
     line-height: 0.9;
   }
 h4 {
-    font-weight: 400;
     font-size: 1rem;
     text-transform: uppercase;
+    font-family: "Cormorant", serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
   }
+.script {
+    font-family: "Herr Von Muellerhoff";
+    font-size: 2rem;
+    opacity: 0.8;
+  }
+.cormorant-g {
+    font-family: "Cormorant Garamond", serif;
+  }
+.oldstyle-h {
+  font-family: "Cormorant";
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
 /* header footer */
 /*   header a {
     padding: 0.5rem 1rem;
@@ -471,39 +488,6 @@ h4 {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.container {
-  width: 100%;
-}
-@media (min-width: 380px) {
-  .container {
-    max-width: 380px;
-  }
-}
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
 /*   .button {
     padding: 0.5rem 1.5rem;
     text-transform: uppercase;
@@ -515,6 +499,19 @@ h4 {
     transition: all 0.2s;
     @apply bg-white text-black border-black dark:bg-black dark:text-white dark:border-white;
   }*/
+.bg-overlay { position: relative;}
+.bg-overlay::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+    content: ""; 
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
+}
+.bg-overlay > * {
+  position: relative;
+}
 .absolute {
   position: absolute;
 }
@@ -545,8 +542,8 @@ h4 {
 .top-0 {
   top: 0px;
 }
-.top-4 {
-  top: 1rem;
+.top-2 {
+  top: 0.5rem;
 }
 .left-0 {
   left: 0px;
@@ -557,11 +554,17 @@ h4 {
 .left-14 {
   left: 3.5rem;
 }
+.right-\[-2rem\] {
+  right: -2rem;
+}
 .left-8 {
   left: 2rem;
 }
 .top-\[5rem\] {
   top: 5rem;
+}
+.top-4 {
+  top: 1rem;
 }
 .bottom-\[-4rem\] {
   bottom: -4rem;
@@ -574,9 +577,6 @@ h4 {
 }
 .left-\[5rem\] {
   left: 5rem;
-}
-.top-2 {
-  top: 0.5rem;
 }
 .bottom-1 {
   bottom: 0.25rem;
@@ -596,23 +596,8 @@ h4 {
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
-.col-span-3 {
-  grid-column: span 3 / span 3;
-}
 .col-start-2 {
   grid-column-start: 2;
-}
-.row-span-2 {
-  grid-row: span 2 / span 2;
-}
-.row-start-2 {
-  grid-row-start: 2;
-}
-.row-start-1 {
-  grid-row-start: 1;
-}
-.row-end-4 {
-  grid-row-end: 4;
 }
 .m-8 {
   margin: 2rem;
@@ -654,6 +639,9 @@ h4 {
 .ml-4 {
   margin-left: 1rem;
 }
+.mr-\[10\%\] {
+  margin-right: 10%;
+}
 .mb-16 {
   margin-bottom: 4rem;
 }
@@ -662,12 +650,6 @@ h4 {
 }
 .mb-6 {
   margin-bottom: 1.5rem;
-}
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-.mb-5 {
-  margin-bottom: 1.25rem;
 }
 .block {
   display: block;
@@ -684,14 +666,14 @@ h4 {
 .hidden {
   display: none;
 }
-.aspect-portrait-tall {
-  aspect-ratio: 5/8;
-}
 .aspect-portrait {
   aspect-ratio: 4/5;
 }
 .aspect-landscapewide {
   aspect-ratio: 5 / 2;
+}
+.aspect-portrait-tall {
+  aspect-ratio: 5/8;
 }
 .aspect-landscape {
   aspect-ratio: 3 / 2;
@@ -741,6 +723,9 @@ h4 {
 .w-\[50\%\] {
   width: 50%;
 }
+.w-\[45rem\] {
+  width: 45rem;
+}
 .w-\[5rem\] {
   width: 5rem;
 }
@@ -774,27 +759,25 @@ h4 {
 .basis-\[15rem\] {
   flex-basis: 15rem;
 }
-.basis-\[60\%\] {
-  flex-basis: 60%;
-}
 .rotate-\[-2deg\] {
   --tw-rotate: -2deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.rotate-\[-5deg\] {
-  --tw-rotate: -5deg;
+.rotate-\[-8deg\] {
+  --tw-rotate: -8deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .rotate-\[-4deg\] {
   --tw-rotate: -4deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.rotate-\[-5deg\] {
+  --tw-rotate: -5deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .rotate-\[-2\.5deg\] {
   --tw-rotate: -2.5deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.grid-flow-col {
-  grid-auto-flow: column;
 }
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -802,23 +785,14 @@ h4 {
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
-.grid-rows-2 {
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-}
 .flex-row {
   flex-direction: row;
-}
-.flex-col {
-  flex-direction: column;
 }
 .flex-nowrap {
   flex-wrap: nowrap;
 }
 .content-center {
   align-content: center;
-}
-.content-end {
-  align-content: flex-end;
 }
 .content-between {
   align-content: space-between;
@@ -838,12 +812,6 @@ h4 {
 .justify-between {
   justify-content: space-between;
 }
-.gap-2 {
-  gap: 0.5rem;
-}
-.gap-5 {
-  gap: 1.25rem;
-}
 .gap-4 {
   gap: 1rem;
 }
@@ -852,8 +820,8 @@ h4 {
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
-.overflow-x-scroll {
-  overflow-x: scroll;
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 .border-2 {
   border-width: 2px;
@@ -894,8 +862,11 @@ h4 {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
-.bg-\[url\(\/images\/moody-11\.jpg\)\] {
-  background-image: url(/images/moody-11.jpg);
+.bg-\[url\(\/images\/noosa-rocks2\.jpg\)\] {
+  background-image: url(/images/noosa-rocks2.jpg);
+}
+.bg-\[url\(\/images\/noosa4\.jpg\)\] {
+  background-image: url(/images/noosa4.jpg);
 }
 .bg-\[url\(\/images\/noosa-inlet\.jpg\)\] {
   background-image: url(/images/noosa-inlet.jpg);
@@ -909,11 +880,11 @@ h4 {
 .bg-\[url\(\/images\/moody-12\.jpg\)\] {
   background-image: url(/images/moody-12.jpg);
 }
+.bg-\[url\(\/images\/noosa-drone\.jpg\)\] {
+  background-image: url(/images/noosa-drone.jpg);
+}
 .bg-\[url\(\/images\/cardtexture-light\.png\)\] {
   background-image: url(/images/cardtexture-light.png);
-}
-.bg-\[url\(\/images\/noosa-rocks2\.jpg\)\] {
-  background-image: url(/images/noosa-rocks2.jpg);
 }
 .bg-cover {
   background-size: cover;
@@ -934,17 +905,20 @@ h4 {
 .p-\[10\%\] {
   padding: 10%;
 }
-.p-\[20\%\] {
-  padding: 20%;
-}
 .p-8 {
   padding: 2rem;
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.p-6 {
+  padding: 1.5rem;
 }
 .p-4 {
   padding: 1rem;
 }
-.p-2 {
-  padding: 0.5rem;
+.p-\[20\%\] {
+  padding: 20%;
 }
 .py-10 {
   padding-top: 2.5rem;
@@ -953,6 +927,14 @@ h4 {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .py-\[20\%\] {
   padding-top: 20%;
@@ -966,17 +948,13 @@ h4 {
   padding-left: 4rem;
   padding-right: 4rem;
 }
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
 .py-\[10\%\] {
   padding-top: 10%;
   padding-bottom: 10%;
 }
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .px-\[20\%\] {
   padding-left: 20%;
@@ -1004,8 +982,8 @@ h4 {
 .pr-0 {
   padding-right: 0px;
 }
-.pb-\[40\%\] {
-  padding-bottom: 40%;
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 .pb-6 {
   padding-bottom: 1.5rem;
@@ -1013,8 +991,8 @@ h4 {
 .pb-10 {
   padding-bottom: 2.5rem;
 }
-.pt-10 {
-  padding-top: 2.5rem;
+.pt-6 {
+  padding-top: 1.5rem;
 }
 .pt-\[10\%\] {
   padding-top: 10%;
@@ -1022,26 +1000,11 @@ h4 {
 .pl-8 {
   padding-left: 2rem;
 }
-.pr-16 {
-  padding-right: 4rem;
+.pr-\[6rem\] {
+  padding-right: 6rem;
 }
 .pt-12 {
   padding-top: 3rem;
-}
-.pt-0 {
-  padding-top: 0px;
-}
-.pb-100p {
-  padding-bottom: 100%;
-}
-.pb-0 {
-  padding-bottom: 0px;
-}
-.pb-80p {
-  padding-bottom: 80%;
-}
-.pl-20p {
-  padding-left: 20%;
 }
 .text-left {
   text-align: left;
@@ -1060,9 +1023,9 @@ h4 {
   font-size: 0.875rem;;
   line-height: 1.2;
 }
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.2;
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 .text-3xl {
   font-size: 1.875rem;
@@ -1072,26 +1035,32 @@ h4 {
   font-size: 2.25rem;
   line-height: 1;
 }
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+.text-\[3rem\] {
+  font-size: 3rem;
+}
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
 }
-.text-lg {
-  font-size: 1.125rem;;
-  line-height: 1.2;
+.font-light {
+  font-weight: 300;
 }
-.text-\[2\.5rem\] {
-  font-size: 2.5rem;
+.font-semibold {
+  font-weight: 600;
 }
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.font-medium {
+  font-weight: 500;
 }
 .font-bold {
   font-weight: 700;
-}
-.font-black {
-  font-weight: 900;
 }
 .uppercase {
   text-transform: uppercase;
@@ -1099,56 +1068,41 @@ h4 {
 .capitalize {
   text-transform: capitalize;
 }
-.normal-case {
-  text-transform: none;
-}
 .italic {
   font-style: italic;
 }
 .leading-\[2\.5rem\] {
   line-height: 2.5rem;
 }
+.leading-\[1\.3em\] {
+  line-height: 1.3em;
+}
 .leading-12 {
   line-height: 3rem;
 }
-.leading-8 {
-  line-height: 2rem;
-}
-.leading-10 {
-  line-height: 2.5rem;
+.leading-9 {
+  line-height: 2.25rem;
 }
 .leading-7 {
   line-height: 1.75rem;
 }
-.leading-\[20px\] {
-  line-height: 20px;
+.leading-10 {
+  line-height: 2.5rem;
 }
-.leading-\[1rem\] {
-  line-height: 1rem;
+.leading-\[0\.8\] {
+  line-height: 0.8;
 }
-.leading-\[4rem\] {
-  line-height: 4rem;
+.leading-8 {
+  line-height: 2rem;
 }
-.leading-\[3rem\] {
-  line-height: 3rem;
+.tracking-\[-0\.06em\] {
+  letter-spacing: -0.06em;
 }
-.leading-\[3em\] {
-  line-height: 3em;
+.tracking-\[-0\.02em\] {
+  letter-spacing: -0.02em;
 }
-.leading-\[0\.05em\] {
-  line-height: 0.05em;
-}
-.leading-\[0\.5em\] {
-  line-height: 0.5em;
-}
-.leading-\[1\.5em\] {
-  line-height: 1.5em;
-}
-.leading-\[1em\] {
-  line-height: 1em;
-}
-.leading-\[1\.3em\] {
-  line-height: 1.3em;
+.tracking-widest {
+  letter-spacing: 0.1em;
 }
 .text-white {
   --tw-text-opacity: 1;
@@ -1174,7 +1128,7 @@ h4 {
     box-shadow: 11px 0 5px -8px rgba(0, 0, 0, 0.45), -11px 0 5px -8px rgba(0, 0, 0, 0.45);
   }
 .shadow-x-sm {
-    box-shadow: 4px 0 3px -1px rgba(0, 0, 0, 0.6), -4px 0 3px -1px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 0 3px -1px rgba(0, 0, 0, 0.6), -4px 0 3px -1px rgba(0, 0, 0, 0.4);
   }
 .shadow-rb {
     box-shadow: 4px 3px 6px 2px rgba(0,0,0,0.5);
@@ -1193,6 +1147,32 @@ h4 {
   max-width: 45rem;
   background-color: var(--watercolour);
 }
+.card-slide-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  overflow-x: scroll;
+}
+.card-slide {
+  flex-shrink: 0;
+}
+@media (min-width: 640px) {
+  .card-slide {
+    flex-basis: 50%;
+  }
+}
+.card-slide-size {
+  min-height: 38rem;
+  width: 28rem;
+  background-color: var(--cardslide-colour);
+}
+section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  background-color: var(--beige);
+}
 /* can add more utilities */
 
 /* Custom CSS */
@@ -1207,9 +1187,17 @@ html {
 /* ----------- Default Styles to apply to the whole project  --------- */
 :root{
   --beige: #F6F6EE;
+  --cardslide-colour: #F6F6EE;
   --watercolour: #D5CEBE; /* replace with image */
+  --bg-colour: #2F2F2E; /* THIS IS FOR LARGE COMPUTERS CHECK IT */
   /* cannot put spaces in arbitary value so make a variable */
 
+}
+.bg-colour {
+  background-color: #2F2F2E;
+}
+.cardslide-colour {
+  background-color: var(--cardslide-colour);
 }
 .beige {
   background-color: var(--beige);
@@ -1264,46 +1252,11 @@ anything you want to override or is general as a base, next level component, spe
   .sm\:hidden {
     display: none;
   }
-  .sm\:max-w-75 {
-    max-width: 75%;
-  }
-  .sm\:max-w-50 {
-    max-width: 50%;
-  }
-  .sm\:basis-\[30\%\] {
-    flex-basis: 30%;
-  }
-  .sm\:grid-cols-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .sm\:grid-cols-\[2\.5rem\2c 1fr\] {
-    grid-template-columns: 2.5rem 1fr;
+  .sm\:basis-\[10\%\] {
+    flex-basis: 10%;
   }
   .sm\:justify-between {
     justify-content: space-between;
-  }
-  .sm\:pr-20 {
-    padding-right: 5rem;
-  }
-  .sm\:pr-5 {
-    padding-right: 1.25rem;
-  }
-  .sm\:pl-10 {
-    padding-left: 2.5rem;
-  }
-  .sm\:text-left {
-    text-align: left;
-  }
-  .sm\:text-\[3\.8rem\] {
-    font-size: 3.8rem;
-  }
-  .sm\:rotate-text-180 {
-    writing-mode: vertical-lr;
-/*     text-orientation: mixed;
-    @apply rotate-180; */
   }
 } 
 @media (min-width: 768px) {
@@ -1312,9 +1265,6 @@ anything you want to override or is general as a base, next level component, spe
   }
   .md\:flex {
     display: flex;
-  }
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .md\:pl-\[15\%\] {
     padding-left: 15%;

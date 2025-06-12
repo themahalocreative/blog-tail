@@ -19,9 +19,17 @@ html {
 /* ----------- Default Styles to apply to the whole project  --------- */
 :root{
   --beige: #F6F6EE;
+  --cardslide-colour: #F6F6EE;
   --watercolour: #D5CEBE; /* replace with image */
+  --bg-colour: #2F2F2E; /* THIS IS FOR LARGE COMPUTERS CHECK IT */
   /* cannot put spaces in arbitary value so make a variable */
 
+}
+.bg-colour {
+  background-color: #2F2F2E;
+}
+.cardslide-colour {
+  background-color: var(--cardslide-colour);
 }
 .beige {
   background-color: var(--beige);
@@ -58,7 +66,8 @@ anything you want to override or is general as a base, next level component, spe
     font-family: 'Noto Sans JP', sans-serif;
   }
   p, a {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Montserrat", serif;
+    font-size: 1rem;
   }
   h1 {
     font-weight: 800;
@@ -73,9 +82,34 @@ anything you want to override or is general as a base, next level component, spe
     line-height: 0.9;
   }
   h4 {
-    font-weight: 400;
     font-size: 1rem;
     text-transform: uppercase;
+    font-family: "Cormorant", serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .handwriting {
+    font-family: "Nanum Brush Script", serif;
+  }
+  .script {
+    font-family: "Herr Von Muellerhoff";
+    @apply opacity-80 text-[2rem] ;
+  }
+  .cormorant {
+    font-family: "Cormorant", serif;
+  }
+  .cormorant-g {
+    font-family: "Cormorant Garamond", serif;
+  }
+  .oldstyle-h {
+    @apply font-semibold uppercase font-["Cormorant"] tracking-[0.05em];
+
+  }
+  .tinos {
+    font-family: "Tinos", serif;
+  }
+  .lora {
+    font-family: "Lora", serif;
   }
   /* header footer */
 /*   header a {
@@ -133,6 +167,15 @@ anything you want to override or is general as a base, next level component, spe
     transition: all 0.2s;
     @apply bg-white text-black border-black dark:bg-black dark:text-white dark:border-white;
   }*/
+  .bg-overlay { position: relative;}
+  .bg-overlay::before {
+    @apply absolute top-0 left-0 right-0 bottom-0 ;
+    content: ""; 
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
+  }
+  .bg-overlay > * {
+    @apply relative;
+  }
 } 
 @layer utilities {
   .rotate-text-180 {
@@ -146,9 +189,9 @@ anything you want to override or is general as a base, next level component, spe
     box-shadow: 11px 0 5px -8px rgba(0, 0, 0, 0.45), -11px 0 5px -8px rgba(0, 0, 0, 0.45);
   }
   .shadow-x-sm {
-    -webkit-box-shadow: 4px 0 3px -1px rgba(0, 0, 0, 0.6), -4px 0 3px -1px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow : 4px 0 3px -1px rgba(0, 0, 0, 0.6), -4px 0 3px -1px rgba(0, 0, 0, 0.6);
-    box-shadow: 4px 0 3px -1px rgba(0, 0, 0, 0.6), -4px 0 3px -1px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 4px 0 3px -1px rgba(0, 0, 0, 0.6), -4px 0 3px -1px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow : 4px 0 3px -1px rgba(0, 0, 0, 0.6), -4px 0 3px -1px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 0 3px -1px rgba(0, 0, 0, 0.6), -4px 0 3px -1px rgba(0, 0, 0, 0.4);
   }
   .shadow-rb {
     -webkit-box-shadow: 4px 3px 6px 2px rgba(0,0,0,0.5);
@@ -164,9 +207,20 @@ anything you want to override or is general as a base, next level component, spe
   }
 /* make sure cardtexture.png included!!! */
   .card-1 {
-    @apply aspect-landscape relative   watercolour max-w-[45rem] mx-auto;
+    @apply aspect-landscape relative watercolour max-w-[45rem] mx-auto;
   }
-
+  .card-slide-container {
+    @apply flex flex-row flex-nowrap gap-[2rem] overflow-x-scroll;
+  }
+  .card-slide {
+    @apply sm:basis-1/2 shrink-0;
+  }
+  .card-slide-size {
+    @apply min-h-[38rem] w-[28rem] cardslide-colour;
+  }
+  section {
+    @apply beige max-w-screen-xl mx-auto;
+  }
 /* can add more utilities */
 
   
